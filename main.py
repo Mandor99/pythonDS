@@ -1,16 +1,30 @@
-# This is a sample Python script.
+print('this \n to \tmake new line\'s')
+name = input("inter your name: ")
+age = input("inter your age: ")
+print('hello ' + name + ' your age is ' + age)
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+list3 = [7, 8, 9]
+list4 = [10, 11, 12]
+list1.extend(list2)
+print(list1)
+list2 += list3
+print(list2)
+list3 = list3 + list4
+print(list3)
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+list_of_tuples = [(0, 1), (1, 1), (1, 0), (0, 0), (1, 2, 3, 4, 5)]
+print(list_of_tuples)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def get_power(num, power):
+    res = 1
+    for n in range(power):
+        res *= num
+    return res
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+print(get_power(5, 2))
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+x = 10
+print(type(x)) # class int

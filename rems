@@ -1,0 +1,250 @@
+1. \n ==>> make new line
+2. \' || \" ==>> to escape '' || ""
+3. \t ==>> to make 4spaces (tap)
+4. string methods ==>> {
+    .lower()
+    .upper()
+    .isupper()
+    .islower()
+    len(var) => length
+    .index("m") ==>> the index of "m" in the string
+    .replace("old", "new") ==>> to replace "old" with "new" in the string
+    str(var) ==>> convert var to string
+}
+
+5. number methods ==>> {
+    int(x)
+    float(x)
+    abs(x) ==>> give |x| +x
+    pow(x, power) == x**power
+    max(x, y, ...)
+    min(x, y, ...)
+    round(x)
+    ** from math import * ==>> {
+        floor(x)
+        ceil(x)
+        sqrt(x)
+}
+
+6. input() ==>> to get a value from the user ==>> make the value string so you don't need to convert it to string
+
+7. list = [] ==>> {
+    list[-1] ==>> last index || [-2] ==>> last - 1 ...
+    list[1:3] ==>> from index 1 to 3 (not including 3rd index)
+    list[1:] ==>> from 1 to the last
+    list1.extend(list2) ==>> make list1 contain all list2 elements
+    .append(ddd) ==>> add at the last
+    .insert(index you want, value)
+    .remove(value)
+    .clear() ==>> empty the list form all elements  (remove all elements)
+    .pop() ==>> remove last element ==>> can store the removed element
+    .index(value) ==>> get the value index
+    .count(value) ==>> get many times this value repeated in the list
+    .sort()
+    .copy() ==>> make a copy from the list
+}
+
+8. tuples ==>> {
+    tuple = (...values) ==>> can't change his values or affect on it
+}
+
+9. dictionary ==>> {
+    dic1 = {"key": "value"} ==>> unique keys ==>> keys & values can be num ||"str"
+    calling ==>>> {
+        dic1["key"] ||
+        dic1.get("key", "the value is not exist") => 2nd param if the key doesn't exist
+    }
+}
+
+10. functions ==>> {
+    def func():
+        # your code
+}
+
+** or & (or, and, and not, not)==>>>  cond1 or cond2 // cond1 and cond2 // cond1 and not cond2 // not cond1 and cond2 **
+** (==, !=, >=, <=)
+** (continue) => to skip this and continue the loop
+** (break) => to stop the loop
+** concat ==>> {
+    1. print(f"my name is {name} and my age is {age}") ==>> f"..."
+    2. print("my name is {} and my age is {}".format(name, age)) ==>> .format(...)
+}
+11. if ==>> {
+    if cond1:
+        # code
+    elif cond2:
+        # code
+    else:
+        # code
+}
+
+12. loop {
+    a. while cond:
+        #code
+        if x==6:
+            continue
+        if x==9:
+            break
+    else:
+        #code
+
+    b. for char in str:
+        # code
+    else:
+        # code
+
+    c. for n in range(10): // not including 10 // range(5, 20, 2) => start from 5 => 20 increasing by 2
+        # code
+}
+
+13. comments ==>> {
+    # dksksk;df
+
+    ''' ==>>> not recommended
+        dsdsmfm;dm
+        fd;fd;.fma;.m
+    '''
+}
+
+14. handle errors ==>> {
+    try:
+        #code
+    except ValueError as err1:
+        print(err1)
+    except ZeroDivisionError:
+        #code
+    except:
+        #code
+
+    ** (valueError) => if invalid input
+    ** (ZeroDivisionError) => if divide by 0
+}
+
+15. reading files ==>>> {
+    file1 = open('path/to/file', 'r') ==>>
+    ** modes => (
+        'r' => read,
+        'w' => write (if u want to start from the beginning and delete the previous content),
+        'a' =>> append to the last of the file => writ without canceled the prev content
+        'w+' => read + write from the beginning (with canceled the prev context),
+        'r+' => read + write from the start (without canceled the prev context)
+        'a+' => read + write from the end (without canceled the prev context)
+    )
+    file1.readable() => true || false ==>> if can read it
+    file1.read() ==>> to read the file ==>> use .read if u open with 'r'
+    file1.write('\nfdfnfkds') ==>> to add to the end of the file ==>> use write if u open with 'w' | ...
+    file1.readline() ==>> rea the file line by line
+    file1.readlines() ==>> read all lines one time and put them in a list[] ===>>> .readlines()[2] => 3rd line
+    file1.writelines([...]) ==>> add a list of lines to the file
+    file1.close()
+}
+
+16. modules ==>> {
+    import file_name ==>> if just func or vars
+    from file_name import className ==>> if classes
+}
+
+/********************************************************************/
+                    ************* OOP ***************
+/********************************************************************/
+1. encapsulation ==>>> {
+    1. methods are (getter & setter) to get & set values across the methods not direct to the properties
+    to save the implementation far away the behavior of the methods
+}
+
+2. abstraction ==>>> {
+    1. the bigger picture of the encapsulation to save the data and just show what do u need (interface) not all the props and all (implementation)
+    ** separate the [interface] from [implementation] **
+    ** save the class secure as don't affected with the changes on another class as every class will be independent on himself (autonomous)**
+    }
+}
+
+3. inheritance ==>>> {
+    1.
+}
+
+4. polymorphism ==>>> {
+    1. objects can do a behavior with many shapes and ways with ==>> {
+        1. method overriding ==>> {
+            the child have the same method of the parent but do a different action
+        }
+        2. method overloading ==>> {
+            1. the class have many methods with the same name but every method get a different parameters and give a different output
+            ** to make a single action with a different points **
+            ** to can make one interface but have many implementations **
+        }
+}
+
+** all data types in python are objects **
+** type(var) ==>> to know the type of the var **
+** id(var) ==>> to get the memory address of this var
+** isinstance(object, class) ==>> check if this object from this class
+** print(dir(Class)) ==>> to show the thunder methods for the class
+** thunder methods ==>> built in methods
+
+5. class & object && inheritance ==>>> {
+    ** def __init__() ==>> constructor() **
+    ** self == this ** self => is always 1st parameter in the __init__() and in the methods ==>> to can access the class props||attributes **
+    ** __init__() ==>> inside it represent (object||instance attribute) **
+    ** class attribute ==>> a prop outside the __init__() ==>> is a sharing prop with all {} not for an one {} ==>> and should hav a value in the implement ==>> an d call it with the class Class.prop
+    ** instance||objects methods ==>> the methods ==>> dealing with object || instance attributes (props)
+    ** class methods ==>> with decorators => {
+        @classmethod
+        def xxx(cls, ...) ==>> cls is class => is the 1st param in the decorator refer to the class like self in the instance methods
+        ** to dealing with the class attribute (sharing props)
+        ** like u can make another init method not one only
+    }
+    ** static method ==>> to make a (utility || helper) method not depends on anything in the class, can't change the class state or props{
+        @staticmethod
+        def add5(x)
+            return x + 5
+    }
+    ** to make prop is private ==>> __prop ==>> to avoid dealing with it directly, only with getter & setter
+
+    1. class Person:
+        num_of_objects_from_this_class = 0
+        def __init__(self, name, age, weight='none'):
+            self.name = name
+            self.__age = age
+            Person.num_of_objects_from_this_class += 1 ==>> to increase 1 every creating an object from this class
+
+        def sleep(self):
+            if self.__age < 15:
+                #code
+
+        @classmethod
+        def modifyClassInit(cls, name, birthYear):
+            return cls(name, age + birthYear) ==>>  == init (name, age) ==>> meaning that it returns the same init in a different way
+
+        @staticmethod
+            def Pi():
+                return 3.14
+
+    2. p1 = Person('ali', 20)
+       p2 = Person.modifyClassProp("ahmed", 1998)
+       p3 = Person.Pi()
+
+    3. class Doctor(Person): ==>>> inherit ...(parent class): super().__init__(...inherited props)
+        def __init__(self, name, age, gender):
+            super().__init__(name, age)
+            self.gender = gender
+
+        def sleep():
+            hours = super().sleep() ==>>> to store the value and can add for it in the code
+            return f"{hours} djaf;jd;fj;fl" ==>> added to inherited method [polymorphism]
+}
+
+6. abstraction ==>>> {
+    python hasn't built in abstract so ==>>> {
+        a. from abc import ABC, abstractmethod
+        b. class Man(ABC):
+                @abstractmethod
+                 def area(self):
+                    pass ==>> code in this place will run
+    }
+        c. class X(Man):
+            def __init__(self, age):
+                self.__age = age
+            def area(self): ==>> note that this is the same method in the abstraction with a code instead of pass
+                return self.__age * 2
+}
