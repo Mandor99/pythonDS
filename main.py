@@ -35,20 +35,41 @@
 
 from stack import Stack
 
-n = int(input('enter stack size: '))
-s = Stack(n)
-while True:
-    el = int(input('1 for push\n2 for pop\n3 to check if empty\n4 to print\n5 to peek\n6 to exist'))
-    if el == 1:
-        item = input('push an item to stack: ')
-        s.push(item)
-    if el == 2:
-        print(s.pop())
-    if el == 3:
-        print(s.isEmpty())
-    if el == 4:
-        s.printStack()
-    if el == 5:
-        print(s.peek())
-    if el == 6:
-        break
+# n = int(input('enter stack size: '))
+# s = Stack(n)
+# while True:
+#     el = int(input('1 for push\n2 for pop\n3 to check if empty\n4 to print\n5 to peek\n6 to exist'))
+#     if el == 1:
+#         item = input('push an item to stack: ')
+#         s.push(item)
+#     if el == 2:
+#         print(s.pop())
+#     if el == 3:
+#         print(s.isEmpty())
+#     if el == 4:
+#         s.printStack()
+#     if el == 5:
+#         print(s.peek())
+#     if el == 6:
+#         break
+
+# ################################################################### #
+from linearSearch import linearSearch
+from sort import BubbleSort
+from sort import SelectionSort
+from sort import InsertionSort
+
+list = []
+val = int(input('Enter the size of the list:'))
+print('Enter values for the list separated by ENTER :')
+for i in range(val):
+    # list.append(input()) # linearSearch
+    list.append(int(input()))  # sort numerical data
+
+# val = input('enter a value you need to get it: ') # linearSearch
+# print('value index is:', linearSearch(list, val)) ## linearSearch
+# print(BubbleSort(list))
+# print(SelectionSort(list))
+print(InsertionSort(list))
+
+# ############################################################ #
