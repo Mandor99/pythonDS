@@ -91,32 +91,75 @@ from linkedList import LinkedList
 # l1.remove(99)
 # l1.printList()
 
-l2 = LinkedList()
+# l2 = LinkedList()
+# while True:
+#     el = (input('1 for addStart\n2 for addEnd\n3 to check if addAfter\n4 to removeStart\n5 to removeEnd\n6 to removeItem\n7 to searchVal\n 8 to check isEmpty\n 9 to printList\n and other key to exist\n'))
+#     if el == '1':
+#         val = input('Enter value to the linked list:\n')
+#         l2.addStart(val)
+#     elif el == '2':
+#         val = input('Enter value to the linked list:\n')
+#         l2.addEnd(val)
+#     elif el == '3':
+#         val = input('Enter value to the linked list:\n')
+#         prev = input('Enter the previous val\n')
+#         l2.addAfter(prev, val)
+#     elif el == '4':
+#         l2.removeStart()
+#     elif el == '5':
+#         l2.removeEnd()
+#     elif el == '6':
+#         val = input('enter val:\n')
+#         l2.remove(val)
+#     elif el == '7':
+#         val = input('search val:\n')
+#         l2.search(val)
+#     elif el == '8':
+#         print(l2.isEmpty())
+#     elif el == '9':
+#         l2.printList()
+#     else:
+#         break
+
+# ############################################################################ #
+from queue import Queue
+
+# n = int(input('enter the max size of the queue:\n'))
+# q = Queue(n)
+# while True:
+#     el = int(input('\nclick\n1 to enqueu\n2 to dequeue\n3 to check is empty\n4 to check is full\n5 to print\n another button to exist'))
+#     if el == 1:
+#         val = input('enter value to queue:\n')
+#         q.enqueue(val)
+#     elif el == 2:
+#         q.dequeue()
+#     elif el == 3:
+#         print(q.isEmpty())
+#     elif el == 4:
+#         print(q.isFull())
+#     elif el == 5:
+#         q.printQueue()
+#     else:
+#         break
+
+# ##################################################################### #
+from queue import CircularQueue
+
+n = int(input('enter the max size of the queue:\n'))
+cq = CircularQueue(n)
 while True:
-    el = (input('1 for addStart\n2 for addEnd\n3 to check if addAfter\n4 to removeStart\n5 to removeEnd\n6 to removeItem\n7 to searchVal\n 8 to check isEmpty\n 9 to printList\n and other key to exist\n'))
-    if el == '1':
-        val = input('Enter value to the linked list:\n')
-        l2.addStart(val)
-    elif el == '2':
-        val = input('Enter value to the linked list:\n')
-        l2.addEnd(val)
-    elif el == '3':
-        val = input('Enter value to the linked list:\n')
-        prev = input('Enter the previous val\n')
-        l2.addAfter(prev, val)
-    elif el == '4':
-        l2.removeStart()
-    elif el == '5':
-        l2.removeEnd()
-    elif el == '6':
-        val = input('enter val:\n')
-        l2.remove(val)
-    elif el == '7':
-        val = input('search val:\n')
-        l2.search(val)
-    elif el == '8':
-        print(l2.isEmpty())
-    elif el == '9':
-        l2.printList()
+    el = int(input('\nclick\n1 to enqueu\n2 to dequeue\n3 to check is empty\n4 to check is full\n5 to print\n another button to exist'))
+    if el == 1:
+        val = input('enter value to queue:\n')
+        cq.enqueue(val)
+    elif el == 2:
+        cq.dequeue()
+    elif el == 3:
+        print(cq.isEmpty())
+    elif el == 4:
+        print(cq.isFull())
+    elif el == 5:
+        cq.printQueue()
     else:
         break
+
