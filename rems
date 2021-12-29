@@ -61,7 +61,7 @@
         # your code
 }
 
-** or & (or, and, and not, not)==>>>  cond1 or cond2 // cond1 and cond2 // cond1 and not cond2 // not cond1 and cond2 **
+** or & (or, and, and not, not, is, is not)==>>>  cond1 or cond2 // cond1 and cond2 // cond1 and not cond2 // not cond1 and cond2 **
 ** (==, !=, >=, <=)
 ** (continue) => to skip this and continue the loop
 ** (break) => to stop the loop

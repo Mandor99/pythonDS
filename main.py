@@ -59,17 +59,64 @@ from sort import BubbleSort
 from sort import SelectionSort
 from sort import InsertionSort
 
-list = []
-val = int(input('Enter the size of the list:'))
-print('Enter values for the list separated by ENTER :')
-for i in range(val):
+# list = []
+# val = int(input('Enter the size of the list:'))
+# print('Enter values for the list separated by ENTER :')
+# for i in range(val):
     # list.append(input()) # linearSearch
-    list.append(int(input()))  # sort numerical data
+    # list.append(int(input()))  # sort numerical data
 
 # val = input('enter a value you need to get it: ') # linearSearch
 # print('value index is:', linearSearch(list, val)) ## linearSearch
 # print(BubbleSort(list))
 # print(SelectionSort(list))
-print(InsertionSort(list))
+# print(InsertionSort(list))
 
 # ############################################################ #
+from linkedList import LinkedList
+
+# l1 = LinkedList()
+# l1.addStart(5)
+# l1.addStart(4)
+# l1.addStart(7)
+# l1.addStart(3)
+# l1.addEnd(55)
+# l1.addAfter(7, 99)
+# l1.addAfter(77, 100)
+# l1.printList()
+# print(l1.search(7))
+# print(l1.search(77))
+# l1.removeStart()
+# l1.removeEnd()
+# l1.remove(99)
+# l1.printList()
+
+l2 = LinkedList()
+while True:
+    el = (input('1 for addStart\n2 for addEnd\n3 to check if addAfter\n4 to removeStart\n5 to removeEnd\n6 to removeItem\n7 to searchVal\n 8 to check isEmpty\n 9 to printList\n and other key to exist\n'))
+    if el == '1':
+        val = input('Enter value to the linked list:\n')
+        l2.addStart(val)
+    elif el == '2':
+        val = input('Enter value to the linked list:\n')
+        l2.addEnd(val)
+    elif el == '3':
+        val = input('Enter value to the linked list:\n')
+        prev = input('Enter the previous val\n')
+        l2.addAfter(prev, val)
+    elif el == '4':
+        l2.removeStart()
+    elif el == '5':
+        l2.removeEnd()
+    elif el == '6':
+        val = input('enter val:\n')
+        l2.remove(val)
+    elif el == '7':
+        val = input('search val:\n')
+        l2.search(val)
+    elif el == '8':
+        print(l2.isEmpty())
+    elif el == '9':
+        l2.printList()
+    else:
+        break
